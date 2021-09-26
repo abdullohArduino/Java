@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class UjianSoal2 {
+	public static void main(String[] args) {
+//		================== Abdulloh ====================
+		
+		Scanner sn = new Scanner(System.in);
+		System.out.println("Input:");
+		System.out.println("Masukkan nama = ");
+		String namaMasukan="",namaSementara="",inisialSementara="",namaTotal="",inisialTotal="";
+		
+		String berhenti = "Exit";
+		while(sn.hasNextLine()) {
+			namaMasukan = sn.nextLine();
+      
+		// ===================== Keterangan ===================
+    // sn.hasNextLine() adalah jika inputannya bernilai String
+    // namaMasukan = sn.nextLine();  = ketika yang di masukan String maka masukan tersebut masuk ke namaMasukan dengan tipe data String
+    // namaMasukan.equalsIgnoreCase(berhenti) = jika namaMasukan sama dengan kata kata (variabel berhenti) tanpa case sensitive
+    // =================== End Keterangan ===================
+    
+			if (namaMasukan.equalsIgnoreCase(berhenti)) {
+				break;
+			} else {
+				namaSementara = namaMasukan;
+				inisialSementara = namaMasukan.substring(0,1);
+				namaTotal = namaTotal + namaSementara + " ";
+				inisialTotal = inisialTotal + inisialSementara;
+			}
+		}
+		System.out.println("Output:");
+		System.out.println("Inisial "+ namaTotal + "adalah "+inisialTotal);
+		
+//		==================== End =======================
+	}
+}
